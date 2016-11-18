@@ -9,7 +9,7 @@ from p2pool.util import math
 
 nets = dict(
     bitcoin=math.Object(
-        PARENT=networks.nets['bitcoin'],
+        PARENT=networks.nets['piron'],
         SHARE_PERIOD=10, # seconds
         CHAIN_LENGTH=24*60*60//10, # shares
         REAL_CHAIN_LENGTH=24*60*60//10, # shares
@@ -22,7 +22,7 @@ nets = dict(
         MAX_TARGET=2**256//2**32 - 1,
         PERSIST=True,
         WORKER_PORT=9332,
-        BOOTSTRAP_ADDRS='forre.st vps.forre.st 74.220.242.6:9334 93.97.192.93 66.90.73.83 67.83.108.0 219.84.64.174 24.167.17.248 109.74.195.142 83.211.86.49 94.23.34.145 168.7.116.243 94.174.40.189:9344 89.79.79.195 portals94.ns01.us'.split(' '),
+        BOOTSTRAP_ADDRS=''.split(' '),
         ANNOUNCE_CHANNEL='#p2pool',
         VERSION_CHECK=lambda v: 50700 <= v < 60000 or 60010 <= v < 60100 or 60400 <= v,
     ),
